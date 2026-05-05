@@ -41,22 +41,13 @@ export default function Nav() {
         ))}
       </div>
       <div className="right">
-        <span
-          className="signin"
-          data-cal-namespace="lets-partner"
-          data-cal-link="jessedragstra/lets-partner"
-          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          style={{ cursor: 'pointer' }}
-        >
-          Sign in
-        </span>
         <button
           className="btn btn-ink"
           data-cal-namespace="lets-partner"
           data-cal-link="jessedragstra/lets-partner"
           data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
         >
-          Get a demo
+          Let&apos;s partner
         </button>
       </div>
     </nav>
