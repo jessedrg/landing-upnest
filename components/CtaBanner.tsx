@@ -15,7 +15,14 @@ export default function CtaBanner({ title, cta, micro }: Props) {
         <h3>{title}</h3>
       </div>
       <div className="r">
-        <button className="btn btn-paper btn-lg">{cta}</button>
+        <button
+          className="btn btn-paper btn-lg"
+          data-cal-namespace="lets-partner"
+          data-cal-link="jessedragstra/lets-partner"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+        >
+          {cta}
+        </button>
         <span className="micro">{micro}</span>
       </div>
     </section>

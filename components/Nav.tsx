@@ -41,8 +41,23 @@ export default function Nav() {
         ))}
       </div>
       <div className="right">
-        <span className="signin">Sign in</span>
-        <button className="btn btn-ink">Get a demo</button>
+        <span
+          className="signin"
+          data-cal-namespace="lets-partner"
+          data-cal-link="jessedragstra/lets-partner"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          style={{ cursor: 'pointer' }}
+        >
+          Sign in
+        </span>
+        <button
+          className="btn btn-ink"
+          data-cal-namespace="lets-partner"
+          data-cal-link="jessedragstra/lets-partner"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+        >
+          Get a demo
+        </button>
       </div>
     </nav>
   );

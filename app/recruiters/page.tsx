@@ -57,7 +57,14 @@ export default function RecruitersPage() {
         </div>
 
         <div className="ctas">
-          <button className="btn btn-ink btn-lg">Apply to recruit →</button>
+          <button
+            className="btn btn-ink btn-lg"
+            data-cal-namespace="lets-partner"
+            data-cal-link="jessedragstra/lets-partner"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            Apply to recruit →
+          </button>
           <Link href="/">
             <button className="btn btn-ghost btn-lg">For companies</button>
           </Link>
