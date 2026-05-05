@@ -344,8 +344,8 @@ footer.foot .links a:hover,footer.foot .links button:hover{color:var(--ink)}
 @media (max-width:480px){
   .hero h1{font-size:34px}
   .hero p.sub{font-size:15px}
-  .ctas{flex-direction:column;align-items:stretch}
-  .ctas .btn{justify-content:center}
+  .ctas{flex-direction:row;gap:10px}
+  .ctas .btn{flex:1;justify-content:center;padding:12px 10px;font-size:13px}
   .fact-strip{gap:6px}
   .fact{font-size:11.5px;padding:6px 10px}
 
