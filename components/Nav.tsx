@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 
 const NAV: { href: string; label: string }[] = [
   { href: '/', label: 'For companies' },
+  { href: '/recruiters', label: 'For recruiters' },
   { href: '/customers', label: 'Customers' },
 ];
 
