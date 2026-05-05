@@ -46,7 +46,7 @@ export default function Nav() {
     <>
       <nav className={`top${scrolled ? ' scrolled' : ''}`}>
         <Link href="/" className="brand">
-          <Image src="/landing-assets/logomark.svg" alt="Upnest" width={30} height={30} priority unoptimized />
+          <Image src="/landing-assets/logomark.png" alt="Upnest" width={30} height={30} priority quality={100} />
         </Link>
         <div className="links">
           {NAV.map((item) => (
