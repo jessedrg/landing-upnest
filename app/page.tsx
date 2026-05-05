@@ -55,7 +55,14 @@ export default function CompaniesPage() {
         </div>
 
         <div className="ctas">
-          <button className="btn btn-ink btn-lg">Get a demo →</button>
+          <button
+            className="btn btn-ink btn-lg"
+            data-cal-namespace="lets-partner"
+            data-cal-link="jessedragstra/lets-partner"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            Get a demo →
+          </button>
           <Link href="/recruiters">
             <button className="btn btn-ghost btn-lg">For recruiters</button>
           </Link>
