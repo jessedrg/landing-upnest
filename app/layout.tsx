@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   title: 'Upnest — Senior hires, fixed bounty.',
   description:
     'Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one flat fee per hire.',
+  icons: {
+    icon: '/landing-assets/logomark.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

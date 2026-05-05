@@ -43,6 +43,25 @@ nav .right{display:flex;align-items:center;gap:14px}
 nav .right .signin{font-size:14px;color:var(--t-2);cursor:pointer}
 nav .right .signin:hover{color:var(--ink)}
 
+/* Hamburger menu button */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:24px;height:24px;padding:0;background:none;border:none;cursor:pointer}
+.hamburger span{display:block;width:100%;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s var(--ease), opacity .25s var(--ease)}
+.hamburger span.open:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger span.open:nth-child(2){opacity:0}
+.hamburger span.open:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu overlay */
+.mobile-menu{position:fixed;inset:0;top:59px;background:var(--bg);z-index:49;display:flex;flex-direction:column;padding:24px 20px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s}
+.mobile-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+.mobile-menu-content{display:flex;flex-direction:column;gap:8px}
+.mobile-link{font-size:18px;font-weight:500;padding:14px 0;border-bottom:1px solid var(--hair);color:var(--t-2);transition:color .15s}
+.mobile-link:hover,.mobile-link.active{color:var(--ink)}
+.mobile-link.active{font-weight:600}
+.mobile-cta{margin-top:16px;width:100%;justify-content:center;padding:14px 20px;font-size:15px}
+
+/* Desktop only button */
+.desktop-only{display:inline-flex}
+
 /* ------------ BUTTONS ------------ */
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:14px;font-weight:500;padding:9px 16px;border-radius:99px;cursor:pointer;transition:transform .15s var(--ease), background .15s, border-color .15s}
 .btn-ink{background:var(--ink);color:#fff}
@@ -244,8 +263,10 @@ footer.foot .links a:hover,footer.foot .links button:hover{color:var(--ink)}
   nav.top{padding:12px 18px}
   nav .links{display:none}
   nav .right .signin{display:none}
-  nav .right .btn-ink{padding:8px 14px;font-size:13px}
+  nav .right .desktop-only{display:none}
+  .hamburger{display:flex}
   nav .brand img{width:26px;height:26px}
+  .mobile-menu{top:51px}
 
   .hero{padding:40px 20px 56px}
   .hero h1{font-size:clamp(34px,9vw,48px);max-width:16ch}
@@ -255,7 +276,7 @@ footer.foot .links a:hover,footer.foot .links button:hover{color:var(--ink)}
   .fact-strip{gap:8px;margin-bottom:20px}
   .fact{font-size:12px;padding:7px 12px}
 
-  .hero-photo{border-radius:14px;aspect-ratio:4/3;margin:0 -4px}
+  .hero-photo{border-radius:14px;aspect-ratio:16/10;margin:0}
   .hero-photo .badge{left:14px;bottom:14px;padding:8px 12px;font-size:12px}
   .hero-photo .badge .meta span{font-size:10px}
 
