@@ -2,8 +2,13 @@
 
 import { getCalApi } from '@calcom/embed-react';
 import { useEffect } from 'react';
+import type { ReactNode } from 'react';
 
-export default function CalProvider({ children }: { children: React.ReactNode }) {
+interface CalProviderProps {
+  children: ReactNode;
+}
+
+export default function CalProvider({ children }: CalProviderProps) {
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: 'lets-partner' });
