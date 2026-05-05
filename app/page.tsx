@@ -61,7 +61,7 @@ export default function CompaniesPage() {
             data-cal-link="jessedragstra/lets-partner"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            Get a demo →
+            Let's partner →
           </button>
           <Link href="/recruiters">
             <button className="btn btn-ghost btn-lg">For recruiters</button>
@@ -231,7 +231,7 @@ export default function CompaniesPage() {
             Stop paying <em>percentages.</em>
           </>
         }
-        cta="Get a demo →"
+        cta="Let's partner →"
         micro="15 minutes · no card · no commitment"
       />
     </main>
