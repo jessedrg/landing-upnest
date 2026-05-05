@@ -1,0 +1,22 @@
+import Link from 'next/link';
+
+const LINKS: { href: string; label: string }[] = [
+  { href: '/', label: 'For companies' },
+  { href: '/recruiters', label: 'For recruiters' },
+  { href: '/customers', label: 'Customers' },
+];
+
+export default function Footer() {
+  return (
+    <footer className="foot">
+      <div>© 2026 Upnest · Senior hires, fixed bounty.</div>
+      <div className="links">
+        {LINKS.map((l) => (
+          <Link key={l.href} href={l.href}>
+            {l.label}
+          </Link>
+        ))}
+      </div>
+    </footer>
+  );
+}
