@@ -77,19 +77,6 @@ export default function CompaniesPage() {
             priority
             style={{ objectFit: 'cover' }}
           />
-          <div className="badge">
-            <Image
-              src="/landing-assets/logomark.svg"
-              alt=""
-              width={18}
-              height={18}
-              style={{ display: 'block' }}
-            />
-            <div className="meta">
-              <b>Upnest</b>
-              <span>Senior hires · fixed bounty</span>
-            </div>
-          </div>
         </div>
       </section>
 
