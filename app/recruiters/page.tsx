@@ -49,7 +49,7 @@ export default function RecruitersPage() {
             Briefs <b>matched to your speciality</b>
           </span>
           <span className="fact">
-            <b>Fixed bounty</b> per hire
+            <b>Way less</b> than the competition
           </span>
           <span className="fact">
             Paid <b>in 24h</b>

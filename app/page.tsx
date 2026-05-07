@@ -35,7 +35,7 @@ export default function CompaniesPage() {
           <span className="dot" /> Senior hires · No % fees
         </span>
         <h1>
-          Senior hires in 25 days. <em>Fixed bounty, not a percentage.</em>
+          Senior hires in 25 days. <em>Way less than the competition.</em>
         </h1>
         <p className="sub">
           Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one
@@ -50,7 +50,7 @@ export default function CompaniesPage() {
             Avg. hire <b>in 25 days</b>
           </span>
           <span className="fact">
-            <b>Fixed bounty</b> · agreed up front
+            <b>Way less</b> · than the competition
           </span>
         </div>
 
