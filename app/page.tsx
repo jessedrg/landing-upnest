@@ -35,7 +35,7 @@ export default function CompaniesPage() {
           <span className="dot" /> Senior hires · No % fees
         </span>
         <h1>
-          Senior hires in 25 days. <em>Way less than the competition, not any %.</em>
+          Senior hires in 25 days. <em>Way less than the competition.</em>
         </h1>
         <p className="sub">
           Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one
