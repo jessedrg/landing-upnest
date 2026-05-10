@@ -16,6 +16,9 @@ export default function Footer() {
             {l.label}
           </Link>
         ))}
+        <a href="https://www.linkedin.com/company/upnesttalent" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>
       </div>
     </footer>
   );
