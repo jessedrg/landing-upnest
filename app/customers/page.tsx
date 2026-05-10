@@ -3,14 +3,14 @@
 import { useState, type FormEvent } from 'react';
 import CtaBanner from '../../components/CtaBanner';
 
-const CASES: { tag: string; title: string; body: string; first: string; hire: string; bounty: string }[] = [
+const CASES: { tag: string; title: string; body: string; first: string; hire: string; savings: string }[] = [
   {
     tag: 'FINTECH · SERIES C',
     title: 'Senior PM, Payments',
     body: 'One brief, three matched recruiters, six qualified candidates in the first week.',
     first: '4d',
     hire: '21d',
-    bounty: '€4k',
+    savings: '~50%',
   },
   {
     tag: 'DEV TOOLS · SERIES B',
@@ -18,7 +18,7 @@ const CASES: { tag: string; title: string; body: string; first: string; hire: st
     body: 'Niche brief that had been open 4 months on a job board. Filled by a specialist recruiter.',
     first: '6d',
     hire: '28d',
-    bounty: '€5.5k',
+    savings: '~60%',
   },
   {
     tag: 'DTC · SEED',
@@ -26,7 +26,7 @@ const CASES: { tag: string; title: string; body: string; first: string; hire: st
     body: "Founder didn't have time to interview a long list. We sent four. They hired the second.",
     first: '3d',
     hire: '18d',
-    bounty: '€4.5k',
+    savings: '~55%',
   },
 ];
 
@@ -93,8 +93,8 @@ export default function CustomersPage() {
                   <b>{c.hire}</b>
                 </div>
                 <div>
-                  <span>Bounty</span>
-                  <b>{c.bounty}</b>
+                  <span>Savings vs agencies</span>
+                  <b>{c.savings}</b>
                 </div>
               </div>
             </div>
