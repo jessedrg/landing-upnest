@@ -32,14 +32,14 @@ export default function CompaniesPage() {
     <main>
       <section className="hero">
         <span className="eyebrow">
-          <span className="dot" /> Senior hires · No % fees
+          <span className="dot" /> Senior hires · Lower fees
         </span>
         <h1>
           Senior hires in 25 days. <em>Way less than the competition.</em>
         </h1>
         <p className="sub">
-          Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one
-          flat fee per hire.
+          Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — at a
+          fraction of what agencies charge.
         </p>
 
         <div className="fact-strip">
@@ -228,7 +228,7 @@ export default function CompaniesPage() {
       <CtaBanner
         title={
           <>
-            Stop paying <em>percentages.</em>
+            Pay less. <em>Hire better.</em>
           </>
         }
         cta="Let's partner →"
