@@ -96,7 +96,7 @@ main{display:block;animation:fade .3s var(--ease)}
 .hero-photo .badge .meta b{font-weight:600}
 .hero-photo .badge .meta span{font-size:11px;color:var(--t-3)}
 
-/* small chip badges (e.g. €1,000 fixed bounty) */
+/* small chip badges */
 .fact-strip{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .fact{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--hair);padding:8px 14px;border-radius:99px;font-size:13px}
 .fact b{font-weight:600;color:var(--ink)}
@@ -152,7 +152,7 @@ section.feature{padding:90px 32px}
 .dash .kpi .l{font-size:10px;color:var(--t-3);font-weight:500}
 .dash .kpi .v{font-family:var(--serif);font-size:28px;line-height:1;margin-top:4px}
 
-/* ------------ BOUNTY EXPLAINER (vs % comparison) ------------ */
+/* ------------ PRICING EXPLAINER (vs % comparison) ------------ */
 .bounty-block{max-width:1180px;margin:0 auto;padding:0 32px}
 .bounty-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .bounty-card{background:#fff;border:1px solid var(--hair);border-radius:18px;padding:32px;position:relative}

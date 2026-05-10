@@ -4,9 +4,9 @@ import HowGrid from '../../components/HowGrid';
 import CtaBanner from '../../components/CtaBanner';
 
 const BRIEFS = [
-  { title: 'Senior PM, Payments', meta: 'Series C fintech · Remote (US) · €4,000 bounty' },
-  { title: 'Staff iOS Engineer', meta: 'Dev tools startup · Remote · €5,500 bounty' },
-  { title: 'Head of Brand Design', meta: 'DTC · NYC · €4,500 bounty' },
+  { title: 'Senior PM, Payments', meta: 'Series C fintech · Remote (US)' },
+  { title: 'Staff iOS Engineer', meta: 'Dev tools startup · Remote' },
+  { title: 'Head of Brand Design', meta: 'DTC · NYC' },
 ];
 
 const PAYOUTS = [
@@ -19,12 +19,12 @@ const HOW_STEPS = [
   { n: '1', title: 'Apply & get vetted', body: 'Tell us your speciality and track record. Quick interview, 48‑hour decision.', meta: 'Step 1' },
   { n: '2', title: 'Get matched to briefs', body: 'Briefs land in your inbox already filtered for fit. Open the ones you can fill, ignore the rest.', meta: 'Step 2' },
   { n: '3', title: 'Submit candidates', body: '30 seconds per submission. Track everything in one dashboard. Get feedback fast.', meta: 'Step 3' },
-  { n: '4', title: 'Get paid', body: 'Bounty hits your account 24 hours after the candidate signs. No invoicing, no chasing.', meta: 'Step 4' },
+  { n: '4', title: 'Get paid', body: 'Payment hits your account 24 hours after the candidate signs. No invoicing, no chasing.', meta: 'Step 4' },
 ];
 
 const FAQS = [
-  { q: 'How much does each bounty pay?', a: "Set per role by the company before any recruiter sees the brief. You see the exact bounty in the brief — typically in the €3k–€8k range depending on type and seniority. The fee doesn't change based on candidate salary.", open: true },
-  { q: 'Do I lose my fee if the candidate negotiates a lower salary?', a: 'No. The bounty is fixed regardless of negotiated comp. You get paid the same amount whether the hire signs at €90k or €300k.' },
+  { q: 'How much do I earn per placement?', a: "Your fee is a percentage of the hire's salary — competitive rates agreed before any recruiter sees the brief. Exact terms are shown upfront in each brief.", open: true },
+  { q: 'Do I lose my fee if the candidate negotiates a lower salary?', a: 'Your fee is based on the final agreed salary. Our commission rates are competitive and transparent from the start.' },
   { q: 'Can I work briefs alongside my own clients?', a: "Yes. Most recruiters on Upnest run their own desk and use Upnest for additional briefs. There's no exclusivity." },
   { q: 'What happens if my candidate gets rejected?', a: 'You see structured feedback within 48 hours. Most recruiters use this to sharpen their pitch on the next submission for the same brief.' },
   { q: 'How do I apply?', a: 'Click "Apply to recruit" above. We\'ll review your background and book a 20‑minute call within two business days.' },
@@ -141,7 +141,7 @@ export default function RecruitersPage() {
           <div className="copy">
             <h3>Paid the day an offer signs</h3>
             <p>
-              No 30‑day net. No invoice chasing. Upnest handles client billing — you get the bounty in your account
+              No 30‑day net. No invoice chasing. Upnest handles client billing — you get your fee in your account
               within 24 hours of the candidate accepting.
             </p>
             <div className="dots">

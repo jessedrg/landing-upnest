@@ -13,14 +13,14 @@ const RECRUITERS: { name: string; role: string; img: string }[] = [
 ];
 
 const HOW_STEPS = [
-  { n: '1', title: 'Brief the role', body: '15‑minute call. We write the brief, agree the fixed bounty, and pick the recruiters who fit.', meta: '~Day 0' },
+  { n: '1', title: 'Brief the role', body: '15‑minute call. We write the brief, agree the fee, and pick the recruiters who fit.', meta: '~Day 0' },
   { n: '2', title: 'First candidates', body: 'Vetted recruiters source in parallel. The first qualified candidate lands in your inbox within five days.', meta: 'Day 5' },
   { n: '3', title: 'Review & advance', body: 'One dashboard. Approve, reject, schedule. Feedback flows back to recruiters automatically.', meta: 'Days 5–20' },
-  { n: '4', title: 'Sign & onboard', body: 'Generate the offer in‑app. Pay the bounty only when the hire signs. 90‑day replacement included.', meta: '~Day 25' },
+  { n: '4', title: 'Sign & onboard', body: 'Generate the offer in‑app. Pay only when the hire signs. 90‑day replacement included.', meta: '~Day 25' },
 ];
 
 const FAQS = [
-  { q: 'How is the bounty calculated?', a: "It's a flat fee per hire, agreed before any recruiter sees the role. The amount depends on the type of role (engineering, sales, design, etc.) and seniority — but never on the candidate's salary.", open: true },
+  { q: 'How is the fee calculated?', a: "We charge a percentage of the hire's salary — but significantly lower than traditional agencies (15–30%). Our rate is agreed before any recruiter sees the role.", open: true },
   { q: "What happens if the hire doesn't work out?", a: 'Every Upnest hire comes with a 90‑day replacement guarantee. If the person leaves or doesn\'t pass probation, we re‑run the search with the same recruiters at no extra cost.' },
   { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. Upnest is active sourcing: vetted recruiters reach out to people who aren't applying anywhere, and only ones with a real fit. You see candidates, not applications." },
   { q: 'Who are the recruiters?', a: 'Independent specialists and small agencies — most have 5–15+ years of experience filling specific role types. We vet every recruiter before they can work on Upnest, and we track their fill rate, response time and candidate quality.' },
@@ -32,14 +32,14 @@ export default function CompaniesPage() {
     <main>
       <section className="hero">
         <span className="eyebrow">
-          <span className="dot" /> Senior hires · No % fees
+          <span className="dot" /> Senior hires · Lower fees
         </span>
         <h1>
           Senior hires in 25 days. <em>Way less than the competition.</em>
         </h1>
         <p className="sub">
-          Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one
-          flat fee per hire.
+          Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — at a
+          fraction of what agencies charge.
         </p>
 
         <div className="fact-strip">
@@ -80,7 +80,7 @@ export default function CompaniesPage() {
         </div>
       </section>
 
-      {/* BOUNTY VS % */}
+      {/* PRICING VS % */}
       <section className="feature">
         <div className="sec-head">
           <div className="eyebrow">— Pricing</div>
@@ -88,8 +88,8 @@ export default function CompaniesPage() {
             One fee. <em>Set before we start.</em>
           </h2>
           <p>
-            Traditional agencies charge 15–30% of first‑year salary. We don't. You agree a fixed bounty up front — the
-            same fee whether you hire a $90k associate or a $300k staff engineer.
+            Traditional agencies charge 15–30% of first‑year salary. We charge a much lower percentage — saving you
+            thousands on every hire.
           </p>
         </div>
         <div className="bounty-block">
@@ -111,17 +111,17 @@ export default function CompaniesPage() {
             </div>
             <div className="bounty-card">
               <div className="lbl">
-                <span className="ok" /> Upnest fixed bounty
+                <span className="ok" /> Upnest lower commission
               </div>
-              <h4>One flat bounty per hire</h4>
+              <h4>A fraction of the usual fee</h4>
               <div className="price">
                 €<span style={{ fontFeatureSettings: "'tnum'" }}>—</span>
                 <span className="small">set together before we start</span>
               </div>
               <ul>
-                <li>Same fee whether the hire earns $90k or $300k</li>
+                <li>Much lower commission than traditional agencies</li>
                 <li>Agreed before any recruiter sees the role</li>
-                <li>Recruiters compete on quality — they get paid the same regardless</li>
+                <li>Recruiters compete on quality, not volume</li>
               </ul>
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function CompaniesPage() {
       <CtaBanner
         title={
           <>
-            Stop paying <em>percentages.</em>
+            Pay less. <em>Hire better.</em>
           </>
         }
         cta="Let's partner →"
