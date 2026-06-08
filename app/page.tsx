@@ -1,30 +1,39 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import Faq from '../components/Faq';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
 
-const RECRUITERS: { name: string; role: string; img: string }[] = [
-  { name: 'Haeri Kim', role: 'Filled 14 senior PM roles', img: '/img/people/p5.png' },
-  { name: 'Nina Sousa', role: 'Eng leadership · Lisbon', img: '/img/people/p1.png' },
-  { name: 'Chisom Robertson', role: 'Design · NYC + remote', img: '/img/people/p3.png' },
-  { name: 'Josh Cooper', role: 'Sales leadership · US', img: '/img/people/p4.png' },
-  { name: 'Mike Song', role: 'Data & ML · APAC', img: '/img/people/p6.png' },
+const CANDIDATES: { name: string; role: string; img: string }[] = [
+  { name: 'Haeri Kim', role: 'Senior PM · ex‑Stripe', img: '/img/people/p5.png' },
+  { name: 'Nina Sousa', role: 'Eng leadership · ex‑Revolut', img: '/img/people/p1.png' },
+  { name: 'Chisom Robertson', role: 'Product Design · ex‑Figma', img: '/img/people/p3.png' },
+  { name: 'Josh Cooper', role: 'Go‑to‑market · ex‑Datadog', img: '/img/people/p4.png' },
+  { name: 'Mike Song', role: 'Staff SWE · ex‑Airbnb', img: '/img/people/p6.png' },
+];
+
+const SECTORS = [
+  'Software Engineering',
+  'Staff & Principal Eng',
+  'Product Management',
+  'Go‑to‑Market & Sales',
+  'Data & ML',
+  'Design',
+  'Operations',
+  'Finance',
 ];
 
 const HOW_STEPS = [
-  { n: '1', title: 'Brief the role', body: '15‑minute call. We write the brief, agree the fee, and pick the recruiters who fit.', meta: '~Day 0' },
-  { n: '2', title: 'First candidates', body: 'Vetted recruiters source in parallel. The first qualified candidate lands in your inbox within five days.', meta: 'Day 5' },
-  { n: '3', title: 'Review & advance', body: 'One dashboard. Approve, reject, schedule. Feedback flows back to recruiters automatically.', meta: 'Days 5–20' },
-  { n: '4', title: 'Sign & onboard', body: 'Generate the offer in‑app. Pay only when the hire signs. 90‑day replacement included.', meta: '~Day 25' },
+  { n: '1', title: 'Brief the role', body: '15‑minute call. We understand the role, the team and exactly the kind of person you want to hire.', meta: '~Day 0' },
+  { n: '2', title: 'We tap our database', body: 'We go straight to our network of pre‑vetted top candidates — people we already know and have placed before.', meta: 'Day 1–5' },
+  { n: '3', title: 'Meet a shortlist', body: 'No long lists. You meet a handful of candidates who genuinely fit the brief, with full context on each one.', meta: 'Days 5–20' },
+  { n: '4', title: 'Sign & onboard', body: 'We manage the offer end‑to‑end. You pay only when the hire signs. 90‑day replacement included.', meta: '~Day 25' },
 ];
 
 const FAQS = [
-  { q: 'How is the fee calculated?', a: "We charge a percentage of the hire's salary — but significantly lower than traditional agencies (15–30%). Our rate is agreed before any recruiter sees the role.", open: true },
-  { q: "What happens if the hire doesn't work out?", a: 'Every Upnest hire comes with a 90‑day replacement guarantee. If the person leaves or doesn\'t pass probation, we re‑run the search with the same recruiters at no extra cost.' },
-  { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. Upnest is active sourcing: vetted recruiters reach out to people who aren't applying anywhere, and only ones with a real fit. You see candidates, not applications." },
-  { q: 'Who are the recruiters?', a: 'Independent specialists and small agencies — most have 5–15+ years of experience filling specific role types. We vet every recruiter before they can work on Upnest, and we track their fill rate, response time and candidate quality.' },
+  { q: 'Where do your candidates come from?', a: "We've spent years building a curated database of senior talent — engineers, product, go‑to‑market, design and more. Many come from top startups and top universities, and a large share are people we've already placed or interviewed in depth.", open: true },
+  { q: "What happens if the hire doesn't work out?", a: 'Every Upnest hire comes with a 90‑day replacement guarantee. If the person leaves or doesn\'t pass probation, we re‑run the search at no extra cost.' },
   { q: 'How fast can we start?', a: 'From kickoff call to first candidate is typically five days. Most companies hire within 25 days of starting.' },
+  { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. We're a hands‑on agency: we already know the people who fit your role and reach out to them directly. You meet candidates, not applications." },
 ];
 
 export default function CompaniesPage() {
@@ -32,14 +41,14 @@ export default function CompaniesPage() {
     <main>
       <section className="hero">
         <span className="eyebrow">
-          <span className="dot" /> Senior hires · Lower fees
+          <span className="dot" /> Top candidates · Delivered fast
         </span>
         <h1>
-          Senior hires in 25 days. <em>Way less than the competition.</em>
+          The best senior talent, <em>from people we already know.</em>
         </h1>
         <p className="sub">
-          Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — at a
-          fraction of what agencies charge.
+          Upnest is a recruiting agency with a curated database of top candidates across engineering, product,
+          go‑to‑market and more — many from the best startups and universities. First candidate in 5 days, hire in ~25.
         </p>
 
         <div className="fact-strip">
@@ -50,7 +59,7 @@ export default function CompaniesPage() {
             Avg. hire <b>in 25 days</b>
           </span>
           <span className="fact">
-            <b>Way less</b> · than the competition
+            <b>Top talent</b> · already vetted
           </span>
         </div>
 
@@ -61,11 +70,8 @@ export default function CompaniesPage() {
             data-cal-link="jessedragstra/lets-partner"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            Let's partner →
+            Let&apos;s partner →
           </button>
-          <Link href="/recruiters">
-            <button className="btn btn-ghost btn-lg">For recruiters</button>
-          </Link>
         </div>
 
         <div className="hero-photo">
@@ -80,64 +86,14 @@ export default function CompaniesPage() {
         </div>
       </section>
 
-      {/* PRICING VS % */}
-      <section className="feature">
-        <div className="sec-head">
-          <div className="eyebrow">— Pricing</div>
-          <h2>
-            One fee. <em>Set before we start.</em>
-          </h2>
-          <p>
-            Traditional agencies charge 15–30% of first‑year salary. We charge a much lower percentage — saving you
-            thousands on every hire.
-          </p>
-        </div>
-        <div className="bounty-block">
-          <div className="bounty-grid">
-            <div className="bounty-card bad">
-              <div className="lbl">
-                <span className="x" /> Traditional agency
-              </div>
-              <h4>15–30% of first‑year salary</h4>
-              <div className="price">
-                <s>$45,000</s>
-                <span className="small">on a $200k hire</span>
-              </div>
-              <ul>
-                <li>Fee scales with seniority — punishes you for hiring great people</li>
-                <li>Negotiated late, often after candidates are interviewing</li>
-                <li>Recruiters compete on submission volume, not quality</li>
-              </ul>
-            </div>
-            <div className="bounty-card">
-              <div className="lbl">
-                <span className="ok" /> Upnest lower commission
-              </div>
-              <h4>A fraction of the usual fee</h4>
-              <div className="price">
-                €<span style={{ fontFeatureSettings: "'tnum'" }}>—</span>
-                <span className="small">set together before we start</span>
-              </div>
-              <ul>
-                <li>Much lower commission than traditional agencies</li>
-                <li>Agreed before any recruiter sees the role</li>
-                <li>Recruiters compete on quality, not volume</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="divider" />
-
-      {/* ROW 1 — vetted recruiters */}
+      {/* ROW 1 — our database of top candidates */}
       <section className="feature">
         <div className="row">
           <div className="copy">
-            <h3>Vetted recruiters, matched to your role</h3>
+            <h3>A database of top candidates, ready to move</h3>
             <p>
-              Every recruiter on Upnest has a track record in your space. We match your role with the 3–5 who've filled
-              it before — not a list of 200.
+              We&apos;ve spent years building relationships with senior talent. When you brief a role, we go straight to
+              the people we already know fit it — not a list of 200 cold applicants.
             </p>
             <div className="dots">
               <span />
@@ -154,10 +110,10 @@ export default function CompaniesPage() {
             <div className="dash">
               <div className="dash-card">
                 <h5>
-                  Matched recruiters <a>View all →</a>
+                  Top candidates <a>View all →</a>
                 </h5>
                 <div className="recs">
-                  {RECRUITERS.map((r) => (
+                  {CANDIDATES.map((r) => (
                     <div key={r.name} className="rec">
                       <div className="av" style={{ backgroundImage: `url(${r.img})` }} />
                       <div>
@@ -170,7 +126,7 @@ export default function CompaniesPage() {
               </div>
               <div>
                 <div className="dash-card">
-                  <h5>Candidates submitted</h5>
+                  <h5>Shortlist sent</h5>
                   <div className="chart">
                     {[30, 50, 42, 80, 95].map((h, i) => (
                       <div key={i} className="bar" style={{ height: `${h}%` }} />
@@ -195,6 +151,31 @@ export default function CompaniesPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* SECTORS */}
+      <section className="feature">
+        <div className="sec-head">
+          <div className="eyebrow">— Where we hire</div>
+          <h2>
+            Top talent, <em>across every senior function.</em>
+          </h2>
+          <p>
+            From staff engineers to go‑to‑market leaders, our database spans the roles that matter most — with
+            candidates from the best startups and universities.
+          </p>
+        </div>
+        <div className="bounty-block">
+          <div className="sector-grid">
+            {SECTORS.map((s) => (
+              <div key={s} className="sector-chip">
+                {s}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -228,7 +209,7 @@ export default function CompaniesPage() {
       <CtaBanner
         title={
           <>
-            Pay less. <em>Hire better.</em>
+            Hire the best. <em>Faster.</em>
           </>
         }
         cta="Let's partner →"
