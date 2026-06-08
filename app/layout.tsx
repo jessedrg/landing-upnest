@@ -29,7 +29,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Upnest — Senior hires, lower fees.',
   description:
-    'Upnest connects companies and agencies with vetted recruiters. First candidate in 5 days, hire in ~25 — one flat fee per hire.',
+    'Upnest is a recruiting agency with a curated database of top candidates across engineering, product and go‑to‑market. First candidate in 5 days, hire in ~25 — at a fraction of agency fees.',
   icons: {
     icon: '/landing-assets/logomark.svg',
   },
