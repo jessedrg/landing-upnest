@@ -30,11 +30,10 @@ const HOW_STEPS = [
 ];
 
 const FAQS = [
-  { q: 'How is the fee calculated?', a: "We charge a percentage of the hire's salary — but significantly lower than traditional agencies (15–30%). Our rate is agreed before we start the search.", open: true },
+  { q: 'Where do your candidates come from?', a: "We've spent years building a curated database of senior talent — engineers, product, go‑to‑market, design and more. Many come from top startups and top universities, and a large share are people we've already placed or interviewed in depth.", open: true },
   { q: "What happens if the hire doesn't work out?", a: 'Every Upnest hire comes with a 90‑day replacement guarantee. If the person leaves or doesn\'t pass probation, we re‑run the search at no extra cost.' },
-  { q: 'Where do your candidates come from?', a: "We've spent years building a curated database of senior talent — engineers, product, go‑to‑market, design and more. Many come from top startups and top universities, and a large share are people we've already placed or interviewed in depth." },
-  { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. We're a hands‑on agency: we already know the people who fit your role and reach out to them directly. You meet candidates, not applications." },
   { q: 'How fast can we start?', a: 'From kickoff call to first candidate is typically five days. Most companies hire within 25 days of starting.' },
+  { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. We're a hands‑on agency: we already know the people who fit your role and reach out to them directly. You meet candidates, not applications." },
 ];
 
 export default function CompaniesPage() {
@@ -42,10 +41,10 @@ export default function CompaniesPage() {
     <main>
       <section className="hero">
         <span className="eyebrow">
-          <span className="dot" /> Senior hires · Lower fees
+          <span className="dot" /> Top candidates · Delivered fast
         </span>
         <h1>
-          The right senior hire, <em>from people we already know.</em>
+          The best senior talent, <em>from people we already know.</em>
         </h1>
         <p className="sub">
           Upnest is a recruiting agency with a curated database of top candidates across engineering, product,
@@ -60,7 +59,7 @@ export default function CompaniesPage() {
             Avg. hire <b>in 25 days</b>
           </span>
           <span className="fact">
-            <b>Way less</b> · than the competition
+            <b>Top talent</b> · already vetted
           </span>
         </div>
 
@@ -86,56 +85,6 @@ export default function CompaniesPage() {
           />
         </div>
       </section>
-
-      {/* PRICING VS % */}
-      <section className="feature">
-        <div className="sec-head">
-          <div className="eyebrow">— Pricing</div>
-          <h2>
-            One fee. <em>Set before we start.</em>
-          </h2>
-          <p>
-            Traditional agencies charge 15–30% of first‑year salary. We charge a much lower percentage — saving you
-            thousands on every hire.
-          </p>
-        </div>
-        <div className="bounty-block">
-          <div className="bounty-grid">
-            <div className="bounty-card bad">
-              <div className="lbl">
-                <span className="x" /> Traditional agency
-              </div>
-              <h4>15–30% of first‑year salary</h4>
-              <div className="price">
-                <s>$45,000</s>
-                <span className="small">on a $200k hire</span>
-              </div>
-              <ul>
-                <li>Fee scales with seniority — punishes you for hiring great people</li>
-                <li>Negotiated late, often after candidates are interviewing</li>
-                <li>You get long lists of applicants, not a real shortlist</li>
-              </ul>
-            </div>
-            <div className="bounty-card">
-              <div className="lbl">
-                <span className="ok" /> Upnest lower commission
-              </div>
-              <h4>A fraction of the usual fee</h4>
-              <div className="price">
-                €<span style={{ fontFeatureSettings: "'tnum'" }}>—</span>
-                <span className="small">set together before we start</span>
-              </div>
-              <ul>
-                <li>Much lower commission than traditional agencies</li>
-                <li>Agreed before we start the search</li>
-                <li>A curated shortlist of people we already know and trust</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="divider" />
 
       {/* ROW 1 — our database of top candidates */}
       <section className="feature">
@@ -260,7 +209,7 @@ export default function CompaniesPage() {
       <CtaBanner
         title={
           <>
-            Pay less. <em>Hire better.</em>
+            Hire the best. <em>Faster.</em>
           </>
         }
         cta="Let's partner →"

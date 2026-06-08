@@ -1,13 +1,11 @@
 import Link from 'next/link';
 
-const LINKS: { href: string; label: string }[] = [
-  { href: '/', label: 'For companies' },
-];
+const LINKS: { href: string; label: string }[] = [];
 
 export default function Footer() {
   return (
     <footer className="foot">
-      <div>© 2026 Upnest · Senior hires, lower fees.</div>
+      <div>© 2026 Upnest · The best senior talent, delivered fast.</div>
       <div className="links">
         {LINKS.map((l) => (
           <Link key={l.href} href={l.href}>

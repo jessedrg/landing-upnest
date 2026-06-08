@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const NAV: { href: string; label: string }[] = [
-  { href: '/', label: 'For companies' },
-];
+const NAV: { href: string; label: string }[] = [];
 
 export default function Nav() {
   const pathname = usePathname();
