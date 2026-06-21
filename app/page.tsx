@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import Faq from '../components/Faq';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
-import TalentPlacedAt from '../components/TalentPlacedAt';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
 
 const CANDIDATES: { name: string; role: string; img: string }[] = [
@@ -29,13 +27,6 @@ const HOW_STEPS = [
   { n: '2', title: 'We tap our database', body: 'We go straight to our network of pre‑vetted top candidates — people we already know and have placed before.', meta: 'Day 1–5' },
   { n: '3', title: 'Meet a shortlist', body: 'No long lists. You meet a handful of candidates who genuinely fit the brief, with full context on each one.', meta: 'Days 5–20' },
   { n: '4', title: 'Sign & onboard', body: 'We manage the offer end‑to‑end. You pay only when the hire signs. 90‑day replacement included.', meta: '~Day 25' },
-];
-
-const FAQS = [
-  { q: 'Where do your candidates come from?', a: "We've spent years building a curated database of senior talent — engineers, product, go‑to‑market, design and more. Many come from top startups and top universities, and a large share are people we've already placed or interviewed in depth.", open: true },
-  { q: "What happens if the hire doesn't work out?", a: 'Every Upnest hire comes with a 90‑day replacement guarantee. If the person leaves or doesn\'t pass probation, we re‑run the search at no extra cost.' },
-  { q: 'How fast can we start?', a: 'From kickoff call to first candidate is typically five days. Most companies hire within 25 days of starting.' },
-  { q: 'How is this different from a job board?', a: "Job boards are passive — you post and wait. We're a hands‑on agency: we already know the people who fit your role and reach out to them directly. You meet candidates, not applications." },
 ];
 
 export default function CompaniesPage() {
@@ -197,18 +188,6 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      {/* FAQ */}
-      <section className="feature">
-        <div className="sec-head">
-          <div className="eyebrow">— Questions</div>
-          <h2>
-            Things companies <em>ask first.</em>
-          </h2>
-        </div>
-        <Faq items={FAQS} />
-      </section>
-
-      <TalentPlacedAt />
       <TalentPlacedFeed />
 
       <CtaBanner
