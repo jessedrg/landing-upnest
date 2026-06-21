@@ -2,6 +2,7 @@ import Image from 'next/image';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
+import TalentPlacedAt from '../components/TalentPlacedAt';
 
 const CANDIDATES: { name: string; role: string; img: string }[] = [
   { name: 'Haeri Kim', role: 'Senior PM · ex‑Stripe', img: '/img/people/p5.png' },
@@ -9,17 +10,6 @@ const CANDIDATES: { name: string; role: string; img: string }[] = [
   { name: 'Chisom Robertson', role: 'Product Design · ex‑Figma', img: '/img/people/p3.png' },
   { name: 'Josh Cooper', role: 'Go‑to‑market · ex‑Datadog', img: '/img/people/p4.png' },
   { name: 'Mike Song', role: 'Staff SWE · ex‑Airbnb', img: '/img/people/p6.png' },
-];
-
-const SECTORS = [
-  'Software Engineering',
-  'Staff & Principal Eng',
-  'Product Management',
-  'Go‑to‑Market & Sales',
-  'Data & ML',
-  'Design',
-  'Operations',
-  'Finance',
 ];
 
 const HOW_STEPS = [
@@ -150,28 +140,8 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      {/* SECTORS */}
-      <section className="feature">
-        <div className="sec-head">
-          <div className="eyebrow">— Where we hire</div>
-          <h2>
-            Top talent, <em>across every senior function.</em>
-          </h2>
-          <p>
-            From staff engineers to go‑to‑market leaders, our database spans the roles that matter most — with
-            candidates from the best startups and universities.
-          </p>
-        </div>
-        <div className="bounty-block">
-          <div className="sector-grid">
-            {SECTORS.map((s) => (
-              <div key={s} className="sector-chip">
-                {s}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* TALENT PLACED AT */}
+      <TalentPlacedAt />
 
       <div className="divider" />
 
