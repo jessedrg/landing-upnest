@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
-import TalentPlacedAt from '../components/TalentPlacedAt';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
 
 const CANDIDATES: { name: string; role: string; img: string }[] = [
@@ -189,7 +188,6 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      <TalentPlacedAt />
       <TalentPlacedFeed />
 
       <CtaBanner
