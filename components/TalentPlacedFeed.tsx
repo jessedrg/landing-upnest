@@ -410,6 +410,20 @@ export default function TalentPlacedFeed({
             justify-content: center;
           }
         }
+
+        /* ---- Align side padding to global section rhythm ---- */
+        @media (max-width: 1024px) {
+          .tpf {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+        }
+        @media (max-width: 768px) {
+          .tpf {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
       `}</style>
     </section>
   );
