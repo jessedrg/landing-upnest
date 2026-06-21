@@ -140,8 +140,8 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      {/* TALENT PLACED AT */}
-      <TalentPlacedAt />
+      {/* TALENT PLACED — feed */}
+      <TalentPlacedFeed />
 
       <div className="divider" />
 
@@ -158,7 +158,8 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      <TalentPlacedFeed />
+      {/* TALENT PLACED AT */}
+      <TalentPlacedAt />
 
       <CtaBanner
         title={
