@@ -2,7 +2,6 @@ import Image from 'next/image';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
-import TalentPlacedAt from '../components/TalentPlacedAt';
 
 const CANDIDATES: { name: string; role: string; img: string }[] = [
   { name: 'Haeri Kim', role: 'Senior PM · ex‑Stripe', img: '/img/people/p5.png' },
@@ -157,9 +156,6 @@ export default function CompaniesPage() {
       </section>
 
       <div className="divider" />
-
-      {/* TALENT PLACED AT */}
-      <TalentPlacedAt />
 
       <CtaBanner
         title={
