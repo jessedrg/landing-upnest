@@ -142,13 +142,13 @@ export default function TalentPlacedFeed({
           background: #f2efe7;
           color: #161512;
           font-family: var(--font-inter, "Inter", system-ui, sans-serif);
-          padding: 120px 48px;
+          padding: 120px 32px;
           display: flex;
           justify-content: center;
         }
         .tpf__inner {
           width: 100%;
-          max-width: 1040px;
+          max-width: 1180px;
         }
         .tpf__head {
           display: flex;

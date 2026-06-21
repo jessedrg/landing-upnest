@@ -11,17 +11,6 @@ const CANDIDATES: { name: string; role: string; img: string }[] = [
   { name: 'Mike Song', role: 'Staff SWE · ex‑Airbnb', img: '/img/people/p6.png' },
 ];
 
-const SECTORS = [
-  'Software Engineering',
-  'Staff & Principal Eng',
-  'Product Management',
-  'Go‑to‑Market & Sales',
-  'Data & ML',
-  'Design',
-  'Operations',
-  'Finance',
-];
-
 const HOW_STEPS = [
   { n: '1', title: 'Brief the role', body: '15‑minute call. We understand the role, the team and exactly the kind of person you want to hire.', meta: '~Day 0' },
   { n: '2', title: 'We tap our database', body: 'We go straight to our network of pre‑vetted top candidates — people we already know and have placed before.', meta: 'Day 1–5' },
@@ -150,28 +139,8 @@ export default function CompaniesPage() {
 
       <div className="divider" />
 
-      {/* SECTORS */}
-      <section className="feature">
-        <div className="sec-head">
-          <div className="eyebrow">— Where we hire</div>
-          <h2>
-            Top talent, <em>across every senior function.</em>
-          </h2>
-          <p>
-            From staff engineers to go‑to‑market leaders, our database spans the roles that matter most — with
-            candidates from the best startups and universities.
-          </p>
-        </div>
-        <div className="bounty-block">
-          <div className="sector-grid">
-            {SECTORS.map((s) => (
-              <div key={s} className="sector-chip">
-                {s}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* TALENT PLACED — feed */}
+      <TalentPlacedFeed />
 
       <div className="divider" />
 
@@ -187,8 +156,6 @@ export default function CompaniesPage() {
       </section>
 
       <div className="divider" />
-
-      <TalentPlacedFeed />
 
       <CtaBanner
         title={
