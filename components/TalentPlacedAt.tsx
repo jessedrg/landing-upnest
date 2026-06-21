@@ -45,80 +45,25 @@ export default function TalentPlacedAt({
 }: TalentPlacedAtProps) {
   return (
     <section
-      style={{
-        background: "#f2efe7",
-        fontFamily: "var(--font-inter, 'Inter', system-ui, sans-serif)",
-        color: "#161512",
-        padding: "120px 48px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
+      className="tpa"
+      style={{ ["--tpa-accent" as string]: accent }}
     >
-      <div style={{ width: "100%", maxWidth: 1200 }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            gap: 48,
-            flexWrap: "wrap",
-            marginBottom: 64,
-          }}
-        >
-          <div style={{ maxWidth: 680 }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 10,
-                fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
-                fontSize: 13,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: accent,
-                marginBottom: 28,
-              }}
-            >
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: accent, display: "inline-block" }} />
+      <div className="tpa-inner">
+        <div className="tpa-head">
+          <div className="tpa-head-main">
+            <div className="tpa-eyebrow">
+              <span className="tpa-eyebrow-dot" />
               <span>{eyebrow}</span>
             </div>
-            <h2
-              style={{
-                fontFamily: "var(--font-newsreader, 'Newsreader', Georgia, serif)",
-                fontWeight: 400,
-                fontSize: 60,
-                lineHeight: 1.05,
-                letterSpacing: "-0.015em",
-                margin: 0,
-                textWrap: "balance",
-              }}
-            >
+            <h2 className="tpa-title">
               Talent we&rsquo;ve placed at the companies{" "}
               <span style={{ fontStyle: "italic" }}>shaping their industries.</span>
             </h2>
           </div>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.6,
-              color: "#5f5b53",
-              maxWidth: 300,
-              margin: "0 0 8px",
-              textWrap: "pretty",
-            }}
-          >
-            {subtitle}
-          </p>
+          <p className="tpa-subtitle">{subtitle}</p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: 18,
-          }}
-        >
+        <div className="tpa-grid">
           {companies.map((co) => (
             <a
               key={co.name}
@@ -126,90 +71,189 @@ export default function TalentPlacedAt({
               target="_blank"
               rel="noopener noreferrer"
               className="tpa-card"
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                background: "#ffffff",
-                border: "1px solid #e7e2d6",
-                borderRadius: 18,
-                padding: 26,
-                display: "flex",
-                flexDirection: "column",
-                gap: 22,
-                minHeight: 188,
-                transition:
-                  "transform .22s cubic-bezier(.2,.7,.3,1), box-shadow .22s ease, border-color .22s ease",
-              }}
             >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div className="tpa-card-top">
                 <Image
                   src={co.logo}
                   alt={`${co.name} logo`}
                   width={52}
                   height={52}
-                  style={{
-                    borderRadius: 13,
-                    objectFit: "cover",
-                    display: "block",
-                    boxShadow: "0 1px 2px rgba(0,0,0,.08)",
-                  }}
+                  className="tpa-logo"
                 />
-                <span
-                  style={{
-                    fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
-                    fontSize: 11,
-                    letterSpacing: "0.1em",
-                    color: "#b3ab9a",
-                  }}
-                >
-                  ↗
-                </span>
+                <span className="tpa-arrow">↗</span>
               </div>
-              <div style={{ marginTop: "auto" }}>
-                <div
-                  style={{
-                    fontFamily: "var(--font-newsreader, 'Newsreader', Georgia, serif)",
-                    fontSize: 25,
-                    fontWeight: 500,
-                    letterSpacing: "-0.01em",
-                    lineHeight: 1.1,
-                  }}
-                >
-                  {co.name}
-                </div>
-                <div style={{ fontSize: 13.5, color: "#8a8473", marginTop: 5 }}>{co.role}</div>
+              <div className="tpa-card-body">
+                <div className="tpa-name">{co.name}</div>
+                <div className="tpa-role">{co.role}</div>
               </div>
             </a>
           ))}
         </div>
 
-        <div
-          style={{
-            marginTop: 40,
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-            fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
-            fontSize: 12.5,
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "#9a9486",
-          }}
-        >
-          <span style={{ flex: 1, height: 1, background: "#ddd8cd" }} />
+        <div className="tpa-footnote">
+          <span className="tpa-rule" />
           <span>{footnote}</span>
-          <span style={{ flex: 1, height: 1, background: "#ddd8cd" }} />
+          <span className="tpa-rule" />
         </div>
       </div>
 
       <style>{`
+        .tpa {
+          background: #f2efe7;
+          font-family: var(--font-inter, 'Inter', system-ui, sans-serif);
+          color: #161512;
+          padding: 120px 48px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .tpa-inner { width: 100%; max-width: 1200px; }
+        .tpa-head {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 48px;
+          flex-wrap: wrap;
+          margin-bottom: 64px;
+        }
+        .tpa-head-main { max-width: 680px; }
+        .tpa-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 13px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: var(--tpa-accent, #6c4cd4);
+          margin-bottom: 28px;
+        }
+        .tpa-eyebrow-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background: var(--tpa-accent, #6c4cd4);
+          display: inline-block;
+        }
+        .tpa-title {
+          font-family: var(--font-newsreader, 'Newsreader', Georgia, serif);
+          font-weight: 400;
+          font-size: 60px;
+          line-height: 1.05;
+          letter-spacing: -0.015em;
+          margin: 0;
+          text-wrap: balance;
+        }
+        .tpa-subtitle {
+          font-size: 17px;
+          line-height: 1.6;
+          color: #5f5b53;
+          max-width: 300px;
+          margin: 0 0 8px;
+          text-wrap: pretty;
+        }
+        .tpa-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 18px;
+        }
+        .tpa-card {
+          text-decoration: none;
+          color: inherit;
+          background: #ffffff;
+          border: 1px solid #e7e2d6;
+          border-radius: 18px;
+          padding: 26px;
+          display: flex;
+          flex-direction: column;
+          gap: 22px;
+          min-height: 188px;
+          transition: transform .22s cubic-bezier(.2,.7,.3,1), box-shadow .22s ease, border-color .22s ease;
+        }
+        .tpa-card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .tpa-logo {
+          border-radius: 13px;
+          object-fit: cover;
+          display: block;
+          box-shadow: 0 1px 2px rgba(0,0,0,.08);
+        }
+        .tpa-arrow {
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          color: #b3ab9a;
+        }
+        .tpa-card-body { margin-top: auto; }
+        .tpa-name {
+          font-family: var(--font-newsreader, 'Newsreader', Georgia, serif);
+          font-size: 25px;
+          font-weight: 500;
+          letter-spacing: -0.01em;
+          line-height: 1.1;
+        }
+        .tpa-role { font-size: 13.5px; color: #8a8473; margin-top: 5px; }
+        .tpa-footnote {
+          margin-top: 40px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 12.5px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #9a9486;
+        }
+        .tpa-rule { flex: 1; height: 1px; background: #ddd8cd; }
+
         .tpa-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 18px 40px -18px rgba(40,34,22,.35);
           border-color: #d8d1c1;
         }
+
         @media (max-width: 1080px) {
-          .tpa-card { width: 100%; }
+          .tpa-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+          .tpa { padding: 72px 24px; }
+          .tpa-head {
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 40px;
+          }
+          .tpa-title { font-size: 40px; }
+          .tpa-subtitle { font-size: 16px; max-width: 100%; }
+        }
+
+        @media (max-width: 540px) {
+          .tpa { padding: 56px 18px; }
+          .tpa-eyebrow { font-size: 12px; margin-bottom: 20px; }
+          .tpa-title { font-size: 32px; line-height: 1.1; }
+          .tpa-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+          .tpa-card {
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+            min-height: 0;
+            padding: 18px 20px;
+          }
+          .tpa-card-top { flex: 0 0 auto; }
+          .tpa-arrow { display: none; }
+          .tpa-card-body { margin-top: 0; }
+          .tpa-name { font-size: 20px; }
+          .tpa-footnote {
+            margin-top: 32px;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+          }
         }
       `}</style>
     </section>
