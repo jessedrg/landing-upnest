@@ -19,6 +19,10 @@ export default function Nav() {
       <Link href="/" className="brand">
         <Image src="/landing-assets/logomark.png" alt="Upnest" width={30} height={30} priority quality={100} />
       </Link>
+      <div className="links">
+        <Link href="/">Companies</Link>
+        <Link href="/experts">Expert Calls</Link>
+      </div>
       <div className="right">
         <button
           className="btn btn-ink"
