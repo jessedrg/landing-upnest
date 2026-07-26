@@ -185,8 +185,8 @@ section.feature{padding:90px 32px}
 .faq details p{margin:14px 0 4px;font-size:15px;color:var(--t-2);line-height:1.55;max-width:62ch}
 
 /* ------------ CTA BANNER ------------ */
-.cta-banner{max-width:1180px;margin:80px auto;background:var(--ink);color:#fff;border-radius:24px;padding:80px 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;position:relative;overflow:hidden}
-.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(60% 80% at 80% 50%,rgba(139,91,196,.3),transparent 60%);pointer-events:none}
+.cta-banner{max-width:1180px;margin:80px auto;background:var(--ink) url('/img/cta-bg.jpg') center 35%/cover no-repeat;color:#fff;border-radius:24px;padding:80px 64px;display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.74) 44%,rgba(10,10,11,.44) 100%),radial-gradient(70% 90% at 82% 50%,rgba(139,91,196,.32),transparent 62%);pointer-events:none}
 .cta-banner .l{position:relative}
 .cta-banner h3{font-family:var(--serif);font-size:64px;line-height:1.02;letter-spacing:-.02em;margin:0;max-width:14ch;font-weight:400}
 .cta-banner h3 em{color:#E9DEC9}
