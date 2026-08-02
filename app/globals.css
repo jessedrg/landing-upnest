@@ -58,7 +58,7 @@ main{display:block;animation:fade .3s var(--ease)}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 /* ------------ HERO ------------ */
-.hero{padding:64px 32px 90px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero{padding:64px 32px 90px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;min-height:calc(100svh - 60px)}
 .hero-copy{text-align:left}
 .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--t-3);background:#fff;border:1px solid var(--hair);padding:6px 12px;border-radius:99px;margin-bottom:26px}
 .hero .eyebrow .dot{width:6px;height:6px;border-radius:99px;background:var(--green)}
