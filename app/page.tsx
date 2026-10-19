@@ -1,3 +1,4 @@
+import PageMotion from '../components/PageMotion';
 import VideoHero from '../components/VideoHero';
 import BrandMark from '../components/BrandMark';
 import PlacementIndex from '../components/PlacementIndex';
@@ -6,6 +7,7 @@ import './home.css';
 
 export default function CompaniesPage() {
   return <main className="home">
+    <PageMotion />
     <VideoHero />
     <section className="intro-note" id="approach" aria-labelledby="intro-heading">
       <span className="small-label">A note on how we work</span>

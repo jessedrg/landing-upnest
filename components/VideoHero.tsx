@@ -49,7 +49,7 @@ export default function VideoHero() {
         <a href="/" className="film-hero__mark" aria-label="Upnest home"><BrandMark /></a>
       </div>
       <div className="film-hero__body">
-        <h1 id="hero-heading">Recruiting<br />top 1% talent.</h1>
+        <h1 id="hero-heading"><span className="hero-line"><span>Recruiting</span></span><span className="hero-line"><span>top 1% talent.</span></span></h1>
         <div className="film-hero__under"><span />New York · San Francisco</div>
       </div>
       <div className="film-hero__bottom">
