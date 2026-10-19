@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Nav() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -13,6 +15,8 @@ export default function Nav() {
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  if (pathname === "/") return null;
 
   return (
     <nav className={`top${scrolled ? ' scrolled' : ''}`}>
