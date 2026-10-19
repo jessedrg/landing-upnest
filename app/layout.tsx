@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter, Newsreader, JetBrains_Mono } from 'next/font/google';
-import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import CalProvider from '../components/CalProvider';
 import './globals.css';
@@ -40,7 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${newsreader.variable} ${mono.variable}`}>
       <body>
         <CalProvider>
-          <Nav />
           {children}
           <Footer />
         </CalProvider>

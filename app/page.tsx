@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import VideoHero from '../components/VideoHero';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
@@ -21,75 +21,7 @@ const HOW_STEPS = [
 export default function CompaniesPage() {
   return (
     <main>
-      <section className="hero">
-        <div className="hero-copy">
-          <span className="eyebrow">
-            <span className="dot" /> Specialists in New York &amp; San Francisco
-          </span>
-          <h1>
-            The best senior talent, <em>from people we already know.</em>
-          </h1>
-          <p className="sub">
-            Upnest is a recruiting agency with a curated database of top candidates across engineering, product and
-            go‑to‑market — hand‑built across the two markets we know best: New York and San Francisco. First candidate
-            in 5 days, hire in ~25.
-          </p>
-
-          <div className="fact-strip">
-            <span className="fact">
-              First candidate <b>in 5 days</b>
-            </span>
-            <span className="fact">
-              Avg. hire <b>in 25 days</b>
-            </span>
-            <span className="fact">
-              <b>Top talent</b> · already vetted
-            </span>
-          </div>
-
-          <div className="ctas">
-            <button
-              className="btn btn-ink btn-lg"
-              data-cal-namespace="lets-partner"
-              data-cal-link="jessedragstra/lets-partner"
-              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-            >
-              Let&apos;s partner →
-            </button>
-          </div>
-        </div>
-
-        <div className="hero-cities">
-          <figure className="city-card city-a">
-            <Image
-              src="/img/cities/city-1.jpg"
-              alt="Aerial view of Midtown Manhattan, New York"
-              fill
-              sizes="(min-width: 1024px) 300px, 45vw"
-              priority
-              style={{ objectFit: 'cover' }}
-            />
-            <figcaption>
-              <span className="city-name">New York</span>
-              <span className="city-meta">Finance · Product · GTM</span>
-            </figcaption>
-          </figure>
-          <figure className="city-card city-b">
-            <Image
-              src="/img/cities/city-2.jpg"
-              alt="The Golden Gate Bridge in San Francisco at sunset"
-              fill
-              sizes="(min-width: 1024px) 300px, 45vw"
-              priority
-              style={{ objectFit: 'cover' }}
-            />
-            <figcaption>
-              <span className="city-name">San Francisco</span>
-              <span className="city-meta">Engineering · AI · Design</span>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
+      <VideoHero />
 
       {/* ROW 1 — our database of top candidates */}
       <section className="feature">
