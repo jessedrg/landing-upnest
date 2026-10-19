@@ -59,7 +59,7 @@ export default function VideoHero() {
           <button onClick={toggleVideo} aria-label={playing ? 'Pause background video' : 'Play background video'} aria-pressed={playing}>
             <span aria-hidden="true">{playing ? 'Ⅱ' : '▷'}</span>
           </button>
-          <a href="#approach">Explore <span aria-hidden="true">↓</span></a>
+          <a href="#approach">Explore</a>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function CityLens() {
   return <section className="city-lens" aria-label="Our recruiting markets">
     <div className="city-lens__image" key={city.name}><Image src={city.image} alt={selected === 0 ? 'Aerial view of Manhattan, New York' : 'Golden Gate Bridge in San Francisco'} fill sizes="100vw" /></div>
     <div className="city-lens__top"><span className="small-label">Two cities. Our entire focus.</span><div aria-label="Choose a city">{cities.map((c,i) => <button key={c.name} aria-pressed={selected === i} onClick={() => setSelected(i)}>{c.name}<span>{i === selected ? '●' : '○'}</span></button>)}</div></div>
-    <div className="city-lens__content" aria-live="polite"><h2>{city.short}<span>↗</span></h2><div><p>{city.caption}</p><span>{city.focus}</span></div></div>
+    <div className="city-lens__content" aria-live="polite"><h2>{city.short}</h2><div><p>{city.caption}</p><span>{city.focus}</span></div></div>
     <div className="city-lens__bottom"><span>Local relationships. Long-term perspective.</span><span>{String(selected + 1).padStart(2,'0')} / 02</span></div>
   </section>;
 }

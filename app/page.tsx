@@ -22,6 +22,6 @@ export default function CompaniesPage() {
         <details><summary><span>03</span><h3>All the way to the offer.</h3><span className="method-plus" aria-hidden="true" /></summary><div className="method-answer"><p>We coordinate interviews, keep feedback moving and help close the offer. You pay when your hire signs, with a 90-day replacement guarantee.</p><span>Finally, we make it happen.</span></div></details>
       </div>
     </section>
-    <section className="contact-note" aria-labelledby="contact-heading"><div><span className="small-label">Have someone in mind?</span><h2 id="contact-heading">Let’s talk.</h2></div><a href="https://cal.com/jessedragstra/lets-partner" aria-label="Book a conversation with Upnest"><span>Tell us about the role</span><span aria-hidden="true">↗</span></a></section>
+    <section className="contact-note" aria-labelledby="contact-heading"><div><span className="small-label">Have someone in mind?</span><h2 id="contact-heading">Let’s talk.</h2></div><a href="https://cal.com/jessedragstra/lets-partner" aria-label="Book a conversation with Upnest"><span>Tell us about the role</span></a></section>
   </main>;
 }
