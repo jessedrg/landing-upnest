@@ -47,7 +47,6 @@ export default function VideoHero() {
       <div className="film-hero__shade" />
       <div className="film-hero__top">
         <a href="/" className="film-hero__mark" aria-label="Upnest home"><BrandMark /></a>
-        <p>Independent recruiting</p>
       </div>
       <div className="film-hero__body">
         <h1 id="hero-heading">Recruiting<br />top 1% talent.</h1>
