@@ -1,9 +1,12 @@
+import localFont from 'next/font/local';
 import type { Metadata } from 'next';
 import { Inter, Newsreader, JetBrains_Mono } from 'next/font/google';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import CalProvider from '../components/CalProvider';
 import './globals.css';
+
+const seatren = localFont({ src: './fonts/Seatren.woff2', variable: '--font-seatren', display: 'swap' });
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${newsreader.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable} ${mono.variable} ${seatren.variable}`}>
       <body>
         <CalProvider>
           <Nav />

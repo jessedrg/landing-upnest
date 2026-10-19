@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const LINKS: { href: string; label: string }[] = [];
+const LINKS = [{ href: '/', label: 'Companies' }, { href: '/experts', label: 'Expert calls' }];
 
 export default function Footer() {
   return (
