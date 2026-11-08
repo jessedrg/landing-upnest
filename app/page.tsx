@@ -2,6 +2,7 @@ import Image from 'next/image';
 import HowGrid from '../components/HowGrid';
 import CtaBanner from '../components/CtaBanner';
 import TalentPlacedFeed from '../components/TalentPlacedFeed';
+import SpecialistPractices from '../components/SpecialistPractices';
 
 const CANDIDATES: { name: string; role: string; img: string }[] = [
   { name: 'Haeri Kim', role: 'Senior PM · ex‑Stripe', img: '/img/people/p5.png' },
@@ -177,6 +178,10 @@ export default function CompaniesPage() {
         </div>
         <HowGrid steps={HOW_STEPS} />
       </section>
+
+      <div className="divider" />
+
+      <SpecialistPractices />
 
       <div className="divider" />
 
