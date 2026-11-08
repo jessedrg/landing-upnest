@@ -2,13 +2,22 @@ import Image from 'next/image';
 
 const PRACTICES = [
   {
+    name: 'health',
+    theme: 'health',
+    logo: '/landing-assets/upnest-health-mark.svg',
+    emphasis: 'A healthier future.',
+    description:
+      'Engineering, AI and commercial talent for the healthtech teams building better healthcare in San Francisco and New York.',
+    href: 'https://health.upnesttalent.com',
+    cta: 'Explore Upnest Health',
+  },
+  {
     name: 'lawyers',
     theme: 'law',
     logo: '/landing-assets/upnest-lawyers-mark.svg',
-    title: 'Legal recruiters. Legal expertise.',
+    emphasis: 'Legal expertise.',
     description:
       'Specialist recruiters who know the legal market — and the partners, lawyers and in-house leaders your firm needs.',
-    specialisms: ['Law firms', 'In-house legal', 'Partners & associates'],
     href: 'https://law.upnesttalent.com',
     cta: 'Explore Upnest Lawyers',
   },
@@ -16,38 +25,48 @@ const PRACTICES = [
     name: 'crypto',
     theme: 'crypto',
     logo: '/landing-assets/upnest-crypto-mark.svg',
-    title: 'Crypto-native recruiters. Real connections.',
+    emphasis: 'Real connections.',
     description:
       'Experts immersed in crypto and Web3, connected to the founders, protocol leaders and hard-to-reach builders shaping the ecosystem.',
-    specialisms: ['Crypto & Web3', 'Protocols', 'Digital assets'],
     href: 'https://crypto.upnesttalent.com',
     cta: 'Explore Upnest Crypto',
+  },
+  {
+    name: 'robotics',
+    theme: 'robotics',
+    logo: '/landing-assets/upnest-robotics-mark.svg',
+    emphasis: 'Real-world impact.',
+    description:
+      'Recruiters connected to the engineers, researchers and technical leaders turning robotics breakthroughs into real-world technology.',
+    href: 'https://robotics.upnesttalent.com',
+    cta: 'Explore Upnest Robotics',
   },
 ];
 
 export default function SpecialistPractices() {
   return (
-    <section className="feature practices" aria-labelledby="practices-title">
+    <section className="feature practices" id="other-niches" aria-labelledby="practices-title">
       <div className="sec-head">
-        <div className="eyebrow">— Our specialist practices</div>
-        <h2 id="practices-title">Beyond tech &amp; <em>go-to-market.</em></h2>
-        <p>Different markets. The same personal approach. Meet the recruiters who know your niche inside out.</p>
+        <div className="eyebrow">The wider Upnest network</div>
+        <h2 id="practices-title">Different niches.<br /><em>Same high standards.</em></h2>
+        <p>Specialist knowledge. Real connections. Explore our other worlds.</p>
       </div>
       <div className="practice-grid">
         {PRACTICES.map((practice) => (
-          <a className={`practice-card practice-${practice.theme}`} href={practice.href} key={practice.name}>
-            <div className="practice-brand" aria-label={`Upnest ${practice.name}`}>
-              <Image src={practice.logo} alt="" width={40} height={40} />
-              <span className="practice-wordmark">upnest <span>{practice.name}</span></span>
+          <a className={`practice-card practice-${practice.theme}`} href={practice.href} key={practice.name} aria-label={practice.cta}>
+            <div className="practice-card-top">
+              <div className="practice-brand">
+                <Image src={practice.logo} alt="" width={44} height={44} />
+                <span className="practice-wordmark">upnest <span>{practice.name}</span></span>
+              </div>
             </div>
-            <h3>{practice.title}</h3>
+            <h3>{practice.emphasis}</h3>
             <p>{practice.description}</p>
-            <ul className="practice-tags" aria-label="Specialisms">
-              {practice.specialisms.map((specialism) => <li key={specialism}>{specialism}</li>)}
-            </ul>
             <div className="practice-link">
               <span>{practice.cta}</span>
-              <span className="practice-arrow" aria-hidden="true">→</span>
+              <span className="practice-arrow" aria-hidden="true">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 19 19 5M5 5h14v14" /></svg>
+              </span>
             </div>
           </a>
         ))}

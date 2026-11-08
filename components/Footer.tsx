@@ -5,7 +5,7 @@ const LINKS: { href: string; label: string }[] = [];
 export default function Footer() {
   return (
     <footer className="foot">
-      <div>© 2026 Upnest · The best senior talent, delivered fast.</div>
+      <div>© 2026 Upnest · Exceptional people. Better health.</div>
       <div className="links">
         {LINKS.map((l) => (
           <Link key={l.href} href={l.href}>

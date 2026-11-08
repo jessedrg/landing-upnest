@@ -43,6 +43,8 @@ function hexToRgba(hex: string, a: number) {
 }
 
 export interface TalentPlacedFeedProps {
+  title?: string;
+  introduction?: string;
   eyebrow?: string;
   count?: string;
   countLabel?: string;
@@ -51,6 +53,8 @@ export interface TalentPlacedFeedProps {
 }
 
 export default function TalentPlacedFeed({
+  title,
+  introduction,
   eyebrow = "Recent placements",
   count = "40+",
   countLabel = "placed this year",
@@ -69,9 +73,9 @@ export default function TalentPlacedFeed({
               <span>{eyebrow}</span>
             </div>
             <h2 className="tpf__title">
-              Talent we&rsquo;ve placed at the companies{" "}
-              <span className="tpf__italic">shaping their industries.</span>
+              {title || <>Talent we&rsquo;ve placed at the companies <span className="tpf__italic">shaping their industries.</span></>}
             </h2>
+            {introduction && <p className="tpf__intro">{introduction}</p>}
           </div>
           <div className="tpf__stat">
             <span className="tpf__statNum">{count}</span>
@@ -122,6 +126,7 @@ export default function TalentPlacedFeed({
                     </div>
                     <a
                       className="tpf__visit"
+                      tabIndex={isOpen ? 0 : -1}
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -189,6 +194,9 @@ export default function TalentPlacedFeed({
         .tpf__italic {
           font-style: italic;
         }
+        .tpf__intro {font-size:14px;line-height:1.7;color:#575c62;max-width:550px;margin:22px 0 0}
+        .tpf__row:focus-visible,.tpf__visit:focus-visible {outline:2px solid #285DB1;outline-offset:4px}
+        @media (prefers-reduced-motion:reduce) {.tpf__panel,.tpf__row,.tpf__toggle {transition:none}}
         .tpf__stat {
           display: flex;
           flex-direction: column;
