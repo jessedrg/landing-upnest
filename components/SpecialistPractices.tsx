@@ -2,6 +2,16 @@ import Image from 'next/image';
 
 const PRACTICES = [
   {
+    name: 'health',
+    theme: 'health',
+    logo: '/landing-assets/upnest-health-mark.svg',
+    emphasis: 'A healthier future.',
+    description:
+      'Engineering, AI and commercial talent for the healthtech teams building better healthcare in San Francisco and New York.',
+    href: 'https://health.upnesttalent.com',
+    cta: 'Explore Upnest Health',
+  },
+  {
     name: 'lawyers',
     theme: 'law',
     logo: '/landing-assets/upnest-lawyers-mark.svg',
@@ -31,25 +41,15 @@ const PRACTICES = [
     href: 'https://robotics.upnesttalent.com',
     cta: 'Explore Upnest Robotics',
   },
-  {
-    name: 'health',
-    theme: 'health',
-    logo: '/landing-assets/upnest-health-mark.svg',
-    emphasis: 'Human connections.',
-    description:
-      'Specialist recruiters who know healthcare, with relationships across clinical leadership, research and the teams shaping better care.',
-    href: 'https://health.upnesttalent.com',
-    cta: 'Explore Upnest Health',
-  },
 ];
 
 export default function SpecialistPractices() {
   return (
-    <section className="feature practices" aria-labelledby="practices-title">
+    <section className="feature practices" id="other-niches" aria-labelledby="practices-title">
       <div className="sec-head">
-        <div className="eyebrow">— Our specialist practices</div>
-        <h2 id="practices-title">Beyond tech &amp; <em>go-to-market.</em></h2>
-        <p>Different markets. The same personal approach. Meet the recruiters who know your niche inside out.</p>
+        <div className="eyebrow">The wider Upnest network</div>
+        <h2 id="practices-title">Different niches.<br /><em>Same high standards.</em></h2>
+        <p>Specialist knowledge. Real connections. Explore our other worlds.</p>
       </div>
       <div className="practice-grid">
         {PRACTICES.map((practice) => (
